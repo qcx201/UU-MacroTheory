@@ -1,0 +1,74 @@
+\documentclass{report}
+\usepackage{hyperref}
+\usepackage{amssymb, mathtools, amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+\usepackage{subfigure}
+\usepackage[margin=0.25in]{geometry}
+\usepackage{pgfplots}
+\usepgfplotslibrary{external}
+% \tikzexternalize
+\pgfplotsset{compat=1.18}
+
+\usepackage{subfiles}
+
+\title{ Macroeconomic Theory \\
+        Course Summary
+        }
+
+\author{
+        Uppsala Masters in Economics 2021-2023\thanks{Course with Professor Christoph Hedtrich.}
+        }
+
+\date{Winter 2021-2022}
+
+% margins
+\oddsidemargin 3mm
+\evensidemargin 3mm
+\topmargin -12mm
+\textheight 600pt
+\textwidth 420pt
+
+% no indent
+\setlength\parindent{0pt}
+% \renewcommand{\theenumi}{\thesection(\alph{enumi})}
+% \renewcommand\thesubsection{\arabic{subsection}}
+
+% custom commands
+\newcommand{\E}[1]{\mathbb{E}\left[#1\right]}
+\newcommand{\Et}[1]{\mathbb{E}_t\left[#1\right]}
+\newcommand{\cov}[1]{\mathrm{Cov}\left(#1\right)}
+\newcommand{\var}[1]{\mathrm{Var}\left(#1\right)}
+\renewcommand{\L}{\mathcal{L}}
+\newcommand{\?}{\textcolor{red}{(?)}} % question mark
+
+\begin{document}
+
+    \maketitle
+    
+    \tableofcontents
+    
+    \subfile{subfile/1-solow growth}
+    
+    \subfile{subfile/2-RCK Diamond}
+    
+    \subfile{subfile/3-endogenous growth}
+    
+    \subfile{subfile/4-consumption}
+    
+    \subfile{subfile/5-RBC}
+    
+    \subfile{subfile/6-DSGE}
+    
+    \subfile{subfile/7-fiscal policy}
+    
+\end{document}
